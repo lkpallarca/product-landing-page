@@ -1,0 +1,10 @@
+.banner {
+    background-image: url("/assets/civic-0.png");
+    @include background(center);
+    height: calc(100vh - 110px);
+    background-attachment: fixed;
+}
+
+body {
+    height: 1000px;
+}

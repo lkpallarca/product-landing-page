@@ -1,0 +1,20 @@
+@mixin honda-logo {
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    margin: 0;
+    top: 2px;
+    left: $margin;
+}
+
+@mixin gen-flex($jc: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+@mixin background($position: bottom) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $position;
+}

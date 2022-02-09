@@ -1,0 +1,31 @@
+#header {
+    @include gen-flex(auto);
+    flex-direction: column;
+
+    .heading {
+        @include gen-flex(space-between);
+        height: 70px;
+        width: 100%;
+        background-color: $head-color;
+    
+        div {
+            @include gen-flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 200px;
+            margin-right: $margin;
+        }
+    }
+
+    #nav-bar {
+        @include gen-flex;
+        justify-content: center;
+        height: 40px;
+        width: 100%;
+        background-color: $nav-color;
+            
+        ul {
+            @include gen-flex;
+        }
+    }
+}
