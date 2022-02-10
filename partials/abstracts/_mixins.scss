@@ -18,3 +18,10 @@
     background-size: cover;
     background-position: $position;
 }
+
+@mixin gen-pos($aob: absolute, $t: 50%, $l: 50%) {
+    position: $aob;
+    top: $t;
+    left: $l;
+    transform: translate(-50%, -50%);
+}
