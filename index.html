@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="/my-logo/favicon.ico">
     <link rel="icon" type="image/gif" href="/my-logo/animated_favicon1.gif">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>2022 Civic Sedan: Driving Fun</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <p>Log In</p>
             </div>
         </div>
-        <nav id="nav-bar"> <!-- position fixed top of page -->
+        <nav id="nav-bar">
             <ul>
                 <li class="nav-link">1</li>
                 <li class="nav-link">2</li>
@@ -29,8 +30,85 @@
             </ul>
         </nav>
     </header>
-    <section class="banner"></section>
-    <!-- element here with <video src="" id="video"></video>-->
+    <section class="banner"> <!--_section-1 -->
+        <div class="sedan-logo"></div>
+        <div class="sedan-intro-1">
+            MAN MAXIMUM
+        </div>
+        <div class="sedan-intro-2">
+            MACHINE MINIMUM
+        </div>
+        <div class="to-video">
+            Watch Now
+        </div>
+    </section>
+    <section class="information"> <!--_section-2 -->
+        <div data-aos="fade-up" class="info-title">
+            <strong>
+                HUMAN
+            </strong>
+            <span>
+                - CENTERED 
+            </span>
+            <span>
+                PHILOSOPHY
+            </span>
+        </div>
+        <div data-aos="fade-up" class="info-text">
+            Every Civic feature has been engineered for excitement. 
+            Maximizing the environment for the driver and passengers while minimizing the space for mechanical components, 
+            the All-new Civic Sedan is as sharp and sophisticated as it is fun to drive.
+        </div>
+        <div class="info-features">
+            <p data-aos="fade-up" class="engine">1.5-Liter VTEC® Turbo-in-line 4-Cylinder & CVT</p>
+            <p data-aos="fade-up" class="sensor">Honda Sensing®</p>
+            <p data-aos="fade-up" class="tech">Apple CarPlay® and Android Auto™ integration</p>
+        </div>
+    </section>
+    <section class="video-banner"> <!--_section-3 -->
+        <iframe id="video-window" width="627" height="309" src="https://www.youtube.com/embed/ZFjlzKDElkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section class="gallery-info"> <!--_section-4 -->
+        <strong data-aos="fade-up">
+            Gallery
+        </strong>
+        <div data-aos="fade-up">
+            Take a look at what the All-New 2022 Civic Sedan offers
+        </div>
+    </section>
+    <section class="gallery"> <!--_section-5 -->
+        <div class="exhibit-1">
+           <div>Athletic good looks</div>
+           <button>View Exterior</button>
+        </div>
+        <div class="exhibit-2">
+            <div>Open and inviting</div>
+            <button>View Interior</button>
+        </div>
+        <div class="exhibit-3">
+            <div>A tour of Civic Sedan</div>
+            <button>Watch Videos</button>
+        </div>
+    </section>
+    <section class="infographic"> <!--_section-6 -->
+        <div class="slideshow">
+            <div data-aos="fade-up">
+                Exterior and Interior
+            </div>
+        </div>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#187;</button>
+            <ul data-slides>
+                <li class="slide exin-1" data-active><img src="/assets/civic-e&i-1.png" alt="blue civic sedan"></li>
+                <li class="slide exin-2"><img src="/assets/civic-e&i-4.png" alt="blue civic sedan front view"></li>
+                <li class="slide exin-3"><img src="/assets/civic-e&i-5.png" alt="civic sedan dashboard"></li>
+                <li class="slide exin-4"><img src="/assets/civic-e&i-6.png" alt="civic sedan interior seats"></li>
+                <li class="slide exin-5"><img src="/assets/civic-e&i-3.png" alt="red civic sedan rear view"></li>
+                <li class="slide exin-6"><img src="/assets/civic-e&i-2.png" alt="civic sedan interior floor"></li>
+            </ul>
+        </div>
+    </section>
     <form action="results.html" id="form">
         <input type="email" name="" id="email">
         <!-- placeholder text in email -->
@@ -38,6 +116,7 @@
         <input type="submit" value="" id="submit">
         <!-- when submitted, email should be sent to static page -->
     </form>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="/scripts/scripts.js"></script>
 </body>
 </html>
