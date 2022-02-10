@@ -1,0 +1,10 @@
+.video-banner {
+    background-image: url("/assets/civic-01.png");
+    @include background(center);
+    height: 70vh;
+    background-attachment: fixed;
+
+    #video-window {
+        @include gen-pos(relative, 50%, 50%);
+    }
+}

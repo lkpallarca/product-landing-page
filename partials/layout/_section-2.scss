@@ -1,0 +1,55 @@
+.information {
+    background-color: $head-color;
+    text-align: center;
+    padding: 30px;
+
+    .info-title {
+        strong {
+            color: $spot-color;
+            font-size: 40px;
+        }
+    
+        span {
+            color: $text-color;
+            font-size: 40px;
+        }
+    }
+
+    .info-text {
+        margin: 30px 0 30px 0;
+        color: $text-color;
+        font-size: 20px;
+    }
+
+    .info-features {
+        @include gen-flex(space-evenly);
+        color: $spot-color;
+        font-size: 20px;
+        font-weight: 700;
+
+        .engine::after {
+            content: "Advanced Technology Engine";
+            color: $text-color;
+            display: block;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        .sensor::after { 
+            content: "Security and Safety";
+            color: $text-color;
+            display: block;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        .tech::after {
+            content: "User Interaction";
+            color: $text-color;
+            display: block;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+    }
+}

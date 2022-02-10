@@ -1,0 +1,16 @@
+.gallery-info {
+    background-color: $head-color;
+    text-align: center;
+    padding: 30px;
+
+    strong {
+        color: $spot-color;
+        font-size: 40px;
+    }
+
+    div {
+        margin-top: 30px;
+        color: $text-color;
+        font-size: 20px;
+    }
+}

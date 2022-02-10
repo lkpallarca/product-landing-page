@@ -1,0 +1,89 @@
+.gallery {
+    background-color: $bg-color;
+    min-height: calc(100vh - 190px);
+    @include gen-flex(space-evenly);
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 700;
+
+    .exhibit-1 {
+        background-image: url("/assets/civic-exterior.png");
+        @include background(center);
+        @include gen-flex(flex-end);
+        flex-direction: column;
+        height: 250px;
+        width: 300px;
+        padding-bottom: 30px;
+
+        button {
+            margin-top: 15px;
+            border-radius: 10px;
+            border: transparent;
+            height: 30px;
+            width: 140px;
+            background-color: $head-color;
+            color: $text-color;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: $text-color;
+            color: $head-color;
+            font-weight: 700;
+        }
+    }
+
+    .exhibit-2 {
+        background-image: url("/assets/civic-interior.png");
+        @include background(center);
+        @include gen-flex(flex-end);
+        flex-direction: column;
+        width: 300px;
+        height: 250px;
+        padding-bottom: 30px;
+
+        button {
+            margin-top: 15px;
+            border-radius: 10px;
+            border: transparent;
+            height: 30px;
+            width: 140px;
+            background-color: $head-color;
+            color: $text-color;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: $text-color;
+            color: $head-color;
+            font-weight: 700;
+        }
+    }
+
+    .exhibit-3 {
+        background-image: url("/assets/civic-e-3.png");
+        @include background(center);
+        @include gen-flex(flex-end);
+        flex-direction: column;
+        width: 300px;
+        height: 250px;
+        padding-bottom: 30px;
+
+        button {
+            margin-top: 15px;
+            border-radius: 10px;
+            border: transparent;
+            height: 30px;
+            width: 140px;
+            background-color: $head-color;
+            color: $text-color;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: $text-color;
+            color: $head-color;
+            font-weight: 700;
+        }
+    }
+}

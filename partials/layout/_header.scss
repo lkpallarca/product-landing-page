@@ -1,6 +1,7 @@
 #header {
-    @include gen-flex(auto);
+    @include gen-flex(center);
     flex-direction: column;
+    color: $text-color;
 
     .heading {
         @include gen-flex(space-between);
@@ -23,6 +24,7 @@
         height: 40px;
         width: 100%;
         background-color: $nav-color;
+        z-index: 5;
             
         ul {
             @include gen-flex;

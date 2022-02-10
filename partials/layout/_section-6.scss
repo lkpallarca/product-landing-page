@@ -1,0 +1,231 @@
+.slideshow {
+    background-color: $head-color;
+    color: $spot-color;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    position: relative;
+    top: 0;
+}
+
+.slideshow::after {
+    content: "";
+    position: absolute;
+    right: 7%;
+    top: 115px;
+    display: block;
+    height: 410px;
+    width: 350px;
+    background-color: $head-color;
+    z-index: 2;
+    box-shadow: 4px 4px 6px black;
+}
+    
+.carousel {
+    height: 80vh;
+    position: relative;
+    background-color: $bg-color;
+
+    .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: 300ms opacity ease-in-out;
+
+        img {
+            display: block;
+            width: 80vw;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .exin-1::before {
+        content: "Next-Generation Style";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-1::after {
+        content: "From its sleek new styling to its airy cabin, the redesigned Civic Sedan is a joy to behold and even better to drive a lower, wider frame and expanded glass areas create a powerful look from the outside while enhancing the view from the inside.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        line-height: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .exin-2::before {
+        content: "Styling";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-2::after {
+        content: "The Civic Sedan comes equipped with LED Headlights and Taillights, 18-Inch Gloss-Black Wheels, Fastback-Inspired Roofline, and Chrome Exhaust Finisher. All giving it a stylish, performance-inspired finish.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .exin-3::before {
+        content: "Ergonomics";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-3::after {
+        content: "Everything on the inside is designed to make your drive more enjoyable, from the wide-open sightlines to the body-stabilizing driver's seat and the simple, easily accessible controls.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .exin-4::before {
+        content: "Amenities";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-4::after {
+        content: "With Heated Seats, One-Touch Power Moonroof, Dual-Zone Climate Control, and 60/40 Split Rear Seatback, these amenities make the Civic Sedan all the more for optimization and comfort.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .exin-5::before {
+        content: "HPD™ Package";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-5::after {
+        content: "Add a custom, high-performance look to your Civic Sedan with this motorsports-inspired package, which includes an HPD™ decklid spoiler, HPD emblem and HPD underbody spoilers.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .exin-6::before {
+        content: "Accessories";
+        @include gen-pos(absolute, 120px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: $text-color;
+        z-index: 3;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .exin-6::after {
+        content: "The Civic Sedan offer excellent protection, durability, and over-all utility with interior accessories such as Contoured high-wall carpet floor mats, Rear passenger window shades, Trunk tray with dividers, Illuminiated door sill protection trim, and a Cargo net.";
+        @include gen-pos(absolute, 190px, 80%);
+        display: block;
+        height: 50px;
+        width: 320px;
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 1px 1px 3px $text-color;
+    }
+
+    .slide[data-active] {
+        opacity: 1;
+    }
+
+    .carousel-button {
+        position: absolute;
+        z-index: 2;
+        background: none;
+        border: none;
+        font-size: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(255, 255, 255, .5);
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 0;
+    }
+
+    .carousel-button:hover,
+    .carousel-button:focus {
+        color: $text-color;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+}
