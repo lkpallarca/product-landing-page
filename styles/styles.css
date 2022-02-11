@@ -24,6 +24,7 @@ time, mark, audio, video {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  scroll-behavior: smooth;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -32,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-html {
+html, body {
   overflow-x: hidden;
 }
 
@@ -97,6 +98,15 @@ table {
   background-color: #00446b;
 }
 
+#header .heading #header-img {
+  position: absolute;
+  height: 60px;
+  width: 80px;
+  margin: 0;
+  top: 2px;
+  left: 30px;
+}
+
 #header .heading div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,7 +125,18 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 200px;
-  margin-right: 100px;
+  margin-right: calc(30px + 20px);
+}
+
+#header .heading div a {
+  text-decoration: none;
+  color: #EEE8A9;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+
+#header .heading div a:hover {
+  color: #f28100;
 }
 
 #header #nav-bar {
@@ -125,10 +146,9 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 40px;
   width: 100%;
   background-color: #3C4856;
@@ -139,12 +159,290 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: calc(30px - 10px);
+}
+
+#header #nav-bar ul li {
+  margin: 0 20px 0 0;
+  padding: 0 10px 0 0;
+  position: relative;
+}
+
+#header #nav-bar ul li a {
+  text-decoration: none;
+  color: #EEE8A9;
+}
+
+#header #nav-bar ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border-bottom: 2px solid #f28100;
+  width: 0;
+  -webkit-transition: 0.7s width;
+  transition: 0.7s width;
+}
+
+#header #nav-bar ul li:hover a {
+  color: #f28100;
+}
+
+#header #nav-bar ul li:hover::after {
+  width: 100%;
+}
+
+.sign-up-modal {
+  background-color: rgba(60, 72, 86, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  display: none;
+}
+
+.sign-up-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.sign-up-modal #close-sign-up {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  cursor: pointer;
+}
+
+.sign-up-modal #confirm-message {
+  position: relative;
+  left: 8%;
+}
+
+.sign-up-modal #form1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  width: 350px;
+}
+
+.sign-up-modal #form1 .name-label, .sign-up-modal #form1 .email-label, .sign-up-modal #form1 .password-label, .sign-up-modal #form1 .conpass-label {
+  position: relative;
+  top: 0%;
+  left: 5%;
+  color: #EEE8A9;
+}
+
+.sign-up-modal #form1 #name {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sign-up-modal #form1 #email {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sign-up-modal #form1 #password {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sign-up-modal #form1 #conpass {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sign-up-modal #form1 #submit {
+  cursor: pointer;
+  background-color: #00446b;
+  color: #EEE8A9;
+  margin-top: 10px;
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 80px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.sign-up-modal #form1 #submit:hover {
+  color: #00446b;
+  background-color: #EEE8A9;
+  font-weight: 700;
+}
+
+.log-in-modal {
+  background-color: rgba(60, 72, 86, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  display: none;
+}
+
+.log-in-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.log-in-modal #close-log-in {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  cursor: pointer;
+}
+
+.log-in-modal #form2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  width: 350px;
+}
+
+.log-in-modal #form2 .email-1-label, .log-in-modal #form2 .password-1-label, .log-in-modal #form2 .checkbox-label {
+  position: relative;
+  left: 5%;
+  color: #EEE8A9;
+}
+
+.log-in-modal #form2 #email1 {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.log-in-modal #form2 #password1 {
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.log-in-modal #form2 #checkbox {
+  cursor: pointer;
+  padding: 0 5px 0 5px;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: -4.5%;
+  left: 43%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.log-in-modal #form2 .forgot {
+  cursor: pointer;
+  color: #EEE8A9;
+  position: relative;
+  top: -9.2%;
+  right: -5%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+
+.log-in-modal #form2 .forgot:hover {
+  color: #00446b;
+}
+
+.log-in-modal #form2 #submit {
+  cursor: pointer;
+  background-color: #00446b;
+  color: #EEE8A9;
+  padding: 0 5px 0 5px;
+  height: 30px;
+  width: 80px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.log-in-modal #form2 #submit:hover {
+  color: #00446b;
+  background-color: #EEE8A9;
+  font-weight: 700;
 }
 
 .banner {
@@ -207,7 +505,7 @@ table {
   font-size: 40px;
 }
 
-.banner .to-video {
+.banner .to-video a {
   position: absolute;
   top: 72.5%;
   left: 83%;
@@ -217,6 +515,13 @@ table {
   width: 150px;
   color: #EEE8A9;
   font-size: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.7s color;
+  transition: 0.7s color;
+}
+
+.banner .to-video a:hover {
+  color: #f28100;
 }
 
 .information {
@@ -285,11 +590,11 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 90vh;
   background-attachment: fixed;
 }
 
-.video-banner #video-window {
+.video-banner #video {
   position: relative;
   top: 50%;
   left: 50%;
@@ -355,20 +660,28 @@ table {
 }
 
 .gallery .exhibit-1 button {
+  cursor: pointer;
   margin-top: 15px;
   border-radius: 10px;
   border: transparent;
   height: 30px;
   width: 140px;
   background-color: #00446b;
-  color: #EEE8A9;
-  font-size: 15px;
 }
 
 .gallery .exhibit-1 button:hover {
   background-color: #EEE8A9;
+}
+
+.gallery .exhibit-1 button:hover a {
   color: #00446b;
   font-weight: 700;
+  z-index: 1;
+}
+
+.gallery .exhibit-1 button a {
+  text-decoration: none;
+  color: #EEE8A9;
 }
 
 .gallery .exhibit-2 {
@@ -395,20 +708,28 @@ table {
 }
 
 .gallery .exhibit-2 button {
+  cursor: pointer;
   margin-top: 15px;
   border-radius: 10px;
   border: transparent;
   height: 30px;
   width: 140px;
   background-color: #00446b;
-  color: #EEE8A9;
-  font-size: 15px;
 }
 
 .gallery .exhibit-2 button:hover {
   background-color: #EEE8A9;
+}
+
+.gallery .exhibit-2 button:hover a {
   color: #00446b;
   font-weight: 700;
+  z-index: 1;
+}
+
+.gallery .exhibit-2 button a {
+  text-decoration: none;
+  color: #EEE8A9;
 }
 
 .gallery .exhibit-3 {
@@ -435,20 +756,28 @@ table {
 }
 
 .gallery .exhibit-3 button {
+  cursor: pointer;
   margin-top: 15px;
   border-radius: 10px;
   border: transparent;
   height: 30px;
   width: 140px;
   background-color: #00446b;
-  color: #EEE8A9;
-  font-size: 15px;
 }
 
 .gallery .exhibit-3 button:hover {
   background-color: #EEE8A9;
+}
+
+.gallery .exhibit-3 button:hover a {
   color: #00446b;
   font-weight: 700;
+  z-index: 1;
+}
+
+.gallery .exhibit-3 button a {
+  text-decoration: none;
+  color: #EEE8A9;
 }
 
 .slideshow {
@@ -565,6 +894,7 @@ table {
   color: white;
   z-index: 3;
   font-size: 20px;
+  line-height: 20px;
   text-shadow: 1px 1px 3px #EEE8A9;
 }
 
@@ -599,6 +929,7 @@ table {
   color: white;
   z-index: 3;
   font-size: 20px;
+  line-height: 20px;
   text-shadow: 1px 1px 3px #EEE8A9;
 }
 
@@ -633,6 +964,7 @@ table {
   color: white;
   z-index: 3;
   font-size: 20px;
+  line-height: 20px;
   text-shadow: 1px 1px 3px #EEE8A9;
 }
 
@@ -667,6 +999,7 @@ table {
   color: white;
   z-index: 3;
   font-size: 20px;
+  line-height: 20px;
   text-shadow: 1px 1px 3px #EEE8A9;
 }
 
@@ -701,6 +1034,7 @@ table {
   color: white;
   z-index: 3;
   font-size: 20px;
+  line-height: 20px;
   text-shadow: 1px 1px 3px #EEE8A9;
 }
 
@@ -736,12 +1070,412 @@ table {
   right: 10px;
 }
 
-#header-img {
+.pandt .slideshow {
+  background-color: #00446b;
+  color: #f28100;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  position: relative;
+  top: 0;
+}
+
+.pandt .slideshow::after {
+  content: "";
   position: absolute;
-  height: 60px;
-  width: 80px;
-  margin: 0;
-  top: 2px;
-  left: 100px;
+  left: 7%;
+  top: 115px;
+  display: block;
+  height: 410px;
+  width: 350px;
+  background-color: #00446b;
+  z-index: 2;
+  -webkit-box-shadow: -4px 4px 6px black;
+          box-shadow: -4px 4px 6px black;
+}
+
+.pandt .carousel {
+  height: 80vh;
+  position: relative;
+  background-color: #202124;
+}
+
+.pandt .carousel ul {
+  position: absolute;
+  top: 0;
+  right: -19%;
+  width: 100%;
+  height: 100%;
+}
+
+.pandt .carousel .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  -webkit-transition: 300ms opacity ease-in-out;
+  transition: 300ms opacity ease-in-out;
+}
+
+.pandt .carousel .slide img {
+  display: block;
+  width: 80vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.pandt .carousel .pete-1::before {
+  content: "Nonstop Fun";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-1::after {
+  content: "The Civic Sedan is engineered for instantaneous response, with a sport-tuned suspension and upgraded powertrain options, including an available 180-horsepower* turbocharged engine.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-2::before {
+  content: "Engineering";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-2::after {
+  content: "Whether you're accelerating from a standstill or passing at speed, the 180-horsepower* engine delivers a forceful response.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-3::before {
+  content: "Driving Experience";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-3::after {
+  content: "Take control of the transmission's shift points with the steering wheel-mounted paddle shifters. Downshift for some extra passing power or shft up on the open highway, all without taking your hands off the wheel.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-4::before {
+  content: "Tech at Every Turn";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-4::after {
+  content: "Hear your playlists like never before with the newly available Bose Premium Sound System. Tap into your smartphone with Apple Carplay® and Android Auto™ integration. And orchestrate it all through the touch-screen, with available Smart Shortcuts to help you find your favorites.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-5::before {
+  content: "Connectivity";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-5::after {
+  content: "With all the integrated devices and technology, you as a driver can experience a sultry, comfortable ride without compensating for performance.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-6::before {
+  content: "Premium Sound System";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-6::after {
+  content: "The new 12-speaker Bose Premium Sound System features Centerpoint® surround-sound technology to immerse you in every note.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .pete-7::before {
+  content: "Peace of Mind";
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: #EEE8A9;
+  z-index: 3;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pandt .carousel .pete-7::after {
+  content: "The blind spot information system* can detect and alert you to the presence of other vehicles to the side of your Civic Sedan. The Tourin Trim also includes cross traffic monitor,* which can alert you to approaching vehicles detected when you're backing up.";
+  position: absolute;
+  top: 190px;
+  left: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  height: 50px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  z-index: 3;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 3px #EEE8A9;
+}
+
+.pandt .carousel .slide[data-active] {
+  opacity: 1;
+}
+
+.pandt .carousel .carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.pandt .carousel .carousel-button:hover,
+.pandt .carousel .carousel-button:focus {
+  color: #EEE8A9;
+}
+
+.pandt .carousel .carousel-button.prev {
+  left: 10px;
+}
+
+.pandt .carousel .carousel-button.next {
+  right: 10px;
+}
+
+.bottom-banner {
+  width: 100vw;
+  height: 60vh;
+  background-color: #202124;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottom-banner .banner-wrapper {
+  background-image: url("/assets/civic-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+  width: 95vw;
+  margin-right: 1%;
+  position: absolute;
+}
+
+.bottom-banner .banner-wrapper .first {
+  position: relative;
+  top: 80px;
+  left: 18%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  color: #f28100;
+  font-size: 30px;
+}
+
+.bottom-banner .banner-wrapper .second {
+  color: #EEE8A9;
+  position: relative;
+  top: 110px;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 450px;
+}
+
+.bottom-banner .banner-wrapper button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: transparent;
+  height: 30px;
+  width: 140px;
+  background-color: #00446b;
+  position: relative;
+  top: 130px;
+  left: 8%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bottom-banner .banner-wrapper button:hover {
+  background-color: #EEE8A9;
+}
+
+.bottom-banner .banner-wrapper button:hover a {
+  color: #00446b;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.bottom-banner .banner-wrapper button a {
+  text-decoration: none;
+  color: #EEE8A9;
 }
 /*# sourceMappingURL=styles.css.map */
