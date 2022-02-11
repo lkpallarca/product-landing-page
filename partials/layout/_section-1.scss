@@ -31,10 +31,18 @@
     }
 
     .to-video {
-        @include gen-pos(absolute, 72.5%, 83%);
-        height: 50px;
-        width: 150px;
-        color: $text-color;
-        font-size: 20px;
+        a {
+            @include gen-pos(absolute, 72.5%, 83%);
+            height: 50px;
+            width: 150px;
+            color: $text-color;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.7s color;
+
+            &:hover {
+                color: $spot-color;
+            }
+        }
     }
 }

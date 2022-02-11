@@ -19,6 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	font-family: $main-font;
 	user-select: none;
+	scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -26,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-html {
+html, body {
 	overflow-x: hidden;
 }
 

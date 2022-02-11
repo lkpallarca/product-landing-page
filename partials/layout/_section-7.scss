@@ -1,0 +1,154 @@
+.pandt {
+    .slideshow {
+        background-color: $head-color;
+        color: $spot-color;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0 20px 0;
+        position: relative;
+        top: 0;
+    }
+    
+    .slideshow::after {
+        content: "";
+        position: absolute;
+        left: 7%;
+        top: 115px;
+        display: block;
+        height: 410px;
+        width: 350px;
+        background-color: $head-color;
+        z-index: 2;
+        box-shadow: -4px 4px 6px black;
+    }
+        
+    .carousel {
+        height: 80vh;
+        position: relative;
+        background-color: $bg-color;
+
+        ul {
+            position: absolute;
+            top: 0;
+            right: -19%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: 300ms opacity ease-in-out;
+    
+            img {
+                display: block;
+                width: 80vw;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    
+        .pete-1::before {
+            content: "Nonstop Fun";
+            @include info2-before(1%);
+        }
+    
+        .pete-1::after {
+            content: "The Civic Sedan is engineered for instantaneous response, with a sport-tuned suspension and upgraded powertrain options, including an available 180-horsepower* turbocharged engine.";
+            @include info2-after(1%);
+        }
+    
+        .pete-2::before {
+            content: "Engineering";
+            @include info2-before(1%);
+        }
+    
+        .pete-2::after {
+            content: "Whether you're accelerating from a standstill or passing at speed, the 180-horsepower* engine delivers a forceful response.";
+            @include info2-after(1%);
+        }
+    
+        .pete-3::before {
+            content: "Driving Experience";
+            @include info2-before(1%);
+        }
+    
+        .pete-3::after {
+            content: "Take control of the transmission's shift points with the steering wheel-mounted paddle shifters. Downshift for some extra passing power or shft up on the open highway, all without taking your hands off the wheel.";
+            @include info2-after(1%);
+        }
+    
+        .pete-4::before {
+            content: "Tech at Every Turn";
+            @include info2-before(1%);
+        }
+    
+        .pete-4::after {
+            content: "Hear your playlists like never before with the newly available Bose Premium Sound System. Tap into your smartphone with Apple Carplay® and Android Auto™ integration. And orchestrate it all through the touch-screen, with available Smart Shortcuts to help you find your favorites.";
+            @include info2-after(1%);
+        }
+    
+        .pete-5::before {
+            content: "Connectivity";
+            @include info2-before(1%);
+        }
+    
+        .pete-5::after {
+            content: "With all the integrated devices and technology, you as a driver can experience a sultry, comfortable ride without compensating for performance.";
+            @include info2-after(1%);
+        }
+    
+        .pete-6::before {
+            content: "Premium Sound System";
+            @include info2-before(1%);
+        }
+    
+        .pete-6::after {
+            content: "The new 12-speaker Bose Premium Sound System features Centerpoint® surround-sound technology to immerse you in every note.";
+            @include info2-after(1%);
+        }
+    
+        .pete-7::before {
+            content: "Peace of Mind";
+            @include info2-before(1%);
+        }
+    
+        .pete-7::after {
+            content: "The blind spot information system* can detect and alert you to the presence of other vehicles to the side of your Civic Sedan. The Tourin Trim also includes cross traffic monitor,* which can alert you to approaching vehicles detected when you're backing up.";
+            @include info2-after(1%);
+        }
+    
+        .slide[data-active] {
+            opacity: 1;
+        }
+    
+        .carousel-button {
+            position: absolute;
+            z-index: 2;
+            background: none;
+            border: none;
+            font-size: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, .5);
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 0;
+        }
+    
+        .carousel-button:hover,
+        .carousel-button:focus {
+            color: $text-color;
+        }
+    
+        .carousel-button.prev {
+            left: 10px;
+        }
+    
+        .carousel-button.next {
+            right: 10px;
+        }
+    }
+}

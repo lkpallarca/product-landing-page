@@ -9,25 +9,69 @@
         width: 100%;
         background-color: $head-color;
     
+        #header-img {
+            @include honda-logo;
+        }
+
         div {
             @include gen-flex;
             flex-direction: row;
             justify-content: space-between;
             width: 200px;
-            margin-right: $margin;
+            margin-right: calc(#{$margin} + 20px);
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                transition: 0.4s color;
+
+                &:hover {
+                    color: $spot-color;
+                }
+            }
         }
     }
 
     #nav-bar {
-        @include gen-flex;
-        justify-content: center;
+        @include gen-flex(flex-end);
         height: 40px;
         width: 100%;
         background-color: $nav-color;
         z-index: 5;
             
         ul {
-            @include gen-flex;
+            display: flex;
+            flex-direction: row;
+            margin-right: calc(#{$margin} - 10px);
+
+            li {
+                margin: 0 20px 0 0;
+                padding: 0 10px 0 0;
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+
+                &::after {
+                    content: "";
+                    @include gen-posit(absolute, -2px, 0);
+                    border-bottom: 2px solid $spot-color;
+                    width: 0;
+                    transition: 0.7s width;
+                }
+
+                &:hover {
+                    a {
+                        color: $spot-color;
+                    }
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

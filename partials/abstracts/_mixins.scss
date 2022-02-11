@@ -25,3 +25,59 @@
     left: $l;
     transform: translate(-50%, -50%);
 }
+
+@mixin gen-posit($aob: absolute, $b: 50%, $l: 50%) {
+    position: $aob;
+    bottom: $b;
+    left: $l;
+}
+
+@mixin info-before {
+    @include gen-pos(absolute, 120px, 80%);
+    display: block;
+    height: 50px;
+    width: 320px;
+    background-color: transparent;
+    color: $text-color;
+    z-index: 3;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@mixin info-after {
+    @include gen-pos(absolute, 190px, 80%);
+    display: block;
+    height: 50px;
+    width: 320px;
+    background-color: transparent;
+    color: white;
+    z-index: 3;
+    font-size: 20px;
+    line-height: 20px;
+    text-shadow: 1px 1px 3px $text-color;
+}
+
+@mixin info2-before($l) {
+    @include gen-pos(absolute, 120px, $l);
+    display: block;
+    height: 50px;
+    width: 320px;
+    background-color: transparent;
+    color: $text-color;
+    z-index: 3;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@mixin info2-after($l) {
+    @include gen-pos(absolute, 190px, $l);
+    display: block;
+    height: 50px;
+    width: 320px;
+    background-color: transparent;
+    color: white;
+    z-index: 3;
+    font-size: 20px;
+    line-height: 20px;
+    text-shadow: 1px 1px 3px $text-color;
+}

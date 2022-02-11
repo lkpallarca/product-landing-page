@@ -1,0 +1,55 @@
+.bottom-banner {
+    width: 100vw;
+    height: 60vh;
+    background-color: $bg-color;
+    @include gen-flex(center);
+
+    .banner-wrapper {
+        background-image: url("/assets/civic-banner.png");
+        @include background(center);
+        min-height: 50vh;
+        width: 95vw;
+        margin-right: 1%;
+        position: absolute;
+
+        .first {
+            @include gen-pos(relative, 80px, 18%);
+            width: 400px;
+            color: $spot-color;
+            font-size: 30px;
+        }
+    
+        .second {
+            color: $text-color;
+            @include gen-pos(relative, 110px, 20%);
+            width: 450px;
+        }
+    
+        button {
+            cursor: pointer;
+            border-radius: 10px;
+            border: transparent;
+            height: 30px;
+            width: 140px;
+            background-color: $head-color;
+            @include gen-pos(relative, 130px, 8%);
+    
+            &:hover{
+                background-color: $text-color;
+    
+                a {
+                    color: $head-color;
+                    font-weight: 700;
+                    z-index: 1;
+                }
+            }
+    
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+    }
+
+    
+}
