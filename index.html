@@ -15,17 +15,18 @@
         <div class="heading">
             <a href="https://automobiles.honda.com/civic-sedan" target="blank"><img src="/assets/honda-logo.png" alt="Honda logo" id="header-img"></a>
             <div>
-                <p>Sign Up</p>
-                <p>Log In</p>
+                <a id="sign-up" href="#">Sign Up</a>
+                <a id="log-in" href="#">Log In</a>
             </div>
         </div>
         <nav id="nav-bar">
             <ul>
-                <li class="nav-link">1</li>
-                <li class="nav-link">2</li>
-                <li class="nav-link">3</li>
-                <li class="nav-link">4</li>
-                <li class="nav-link">5</li>
+                <li class="nav-link"><a href="#header">Home</a></li>
+                <li class="nav-link"><a href="#video-window">Video</a></li>
+                <li class="nav-link"><a href="#gallery-window">Gallery</a></li>
+                <li class="nav-link"><a href="#eandi-window">Exterior & Interior</a></li>
+                <li class="nav-link"><a href="#pandt-window">Performance & Technology</a></li>
+                <li class="nav-link"><a href="#shop-window">Shop</a></li>
                 <!-- scrollToView for nav-links -->
             </ul>
         </nav>
@@ -39,7 +40,7 @@
             MACHINE MINIMUM
         </div>
         <div class="to-video">
-            Watch Now
+            <a href="#video-window">Watch Now</a> 
         </div>
     </section>
     <section class="information"> <!--_section-2 -->
@@ -65,9 +66,11 @@
             <p data-aos="fade-up" class="tech">Apple CarPlay® and Android Auto™ integration</p>
         </div>
     </section>
+    <div id="video-window" style="margin-top: -62px; position: absolute;"></div> <!--dummy div-->
     <section class="video-banner"> <!--_section-3 -->
-        <iframe id="video-window" width="627" height="309" src="https://www.youtube.com/embed/ZFjlzKDElkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="video" width="627" height="309" src="https://www.youtube.com/embed/ZFjlzKDElkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
+    <div id="gallery-window" style="margin-top: -57.5px; position: absolute;"></div> <!--dummy div-->
     <section class="gallery-info"> <!--_section-4 -->
         <strong data-aos="fade-up">
             Gallery
@@ -79,21 +82,22 @@
     <section class="gallery"> <!--_section-5 -->
         <div class="exhibit-1">
            <div>Athletic good looks</div>
-           <button>View Exterior</button>
+           <button><a href="https://automobiles.honda.com/civic-sedan#" target="blank">View Exterior</a></button>
         </div>
         <div class="exhibit-2">
             <div>Open and inviting</div>
-            <button>View Interior</button>
+            <button><a href="https://automobiles.honda.com/civic-sedan#" target="blank">View Interior</a></button>
         </div>
         <div class="exhibit-3">
             <div>A tour of Civic Sedan</div>
-            <button>Watch Videos</button>
+            <button><a href="https://automobiles.honda.com/civic-sedan#" target="blank">Watch Videos</a></button>
         </div>
     </section>
-    <section class="infographic"> <!--_section-6 -->
+    <div id="eandi-window" style="margin-top: -65px; position: absolute;"></div> <!--dummy div-->
+    <section> <!--_section-6 -->
         <div class="slideshow">
             <div data-aos="fade-up">
-                Exterior and Interior
+                Exterior & Interior
             </div>
         </div>
         <div class="carousel" data-carousel>
@@ -109,13 +113,101 @@
             </ul>
         </div>
     </section>
-    <form action="results.html" id="form">
-        <input type="email" name="" id="email">
-        <!-- placeholder text in email -->
-        <!-- email validation -->
-        <input type="submit" value="" id="submit">
-        <!-- when submitted, email should be sent to static page -->
-    </form>
+    <div id="pandt-window" style="margin-top: -65px; position: absolute;"></div> <!--dummy div-->
+    <section class="pandt"> <!--_section-7-->
+        <div class="slideshow">
+            <div data-aos="fade-up">
+                Performance & Technology
+            </div>
+        </div>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#187;</button>
+            <ul data-slides>
+                <li class="slide pete-1" data-active><img src="/assets/civic-pe&te-2.png" alt="silver civic rear view"></li>
+                <li class="slide pete-2"><img src="/assets/civic-pe&te-3.png" alt="engine picture"></li>
+                <li class="slide pete-3"><img src="/assets/civic-pe&te-4.png" alt="civic sedan driving controls"></li>
+                <li class="slide pete-4"><img src="/assets/civic-pe&te-5.png" alt="dashboard picture of civic sedan with gadgets"></li>
+                <li class="slide pete-5"><img src="/assets/civic-pe&te-6.png" alt="picture of a tablet device"></li>
+                <li class="slide pete-6"><img src="/assets/civic-pe&te-7.png" alt="overhead picture of surround sound system"></li>
+                <li class="slide pete-7"><img src="/assets/civic-pe&te-1.png" alt="civic sedan side mirror"></li>
+            </ul>
+        </div>
+    </section>
+    <section class="bottom-banner"><!--_section-8-->
+        <div data-aos="fade-right" class="banner-wrapper">
+            <div class="first">
+                Honda Performance, Personified
+            </div>
+            <div class="second">
+                add a custom Honda Perfomance Development™ look to your Civic Sedan with the official
+                HPD™ Package, featuring a gloss-black decklid spoiler, emblem and underbody spoilers.
+            </div>
+            <button>
+                <a href="">Learn More</a>
+            </button>
+        </div>
+    </section>
+    <div class="sign-up-modal">
+        <div>
+            <button id="close-sign-up">X</button>
+            <form action="results.html" id="form1" method="get" enctype="multipart/form-data">
+                <label for="name" class="name-label">Full Name</label>
+                <input type="name" name="name" id="name" placeholder="Ex. Lance Kennard M. Pallarca">
+                <label for="email" class="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <label for="password" class="password-label">Password</label>
+                <input type="password" name="password" id="password" onkeyup="check()" required minlength="6">
+                <label for="conpass" class="conpass-label">Confirm Password</label>
+                <input type="password" name="conpass" id="conpass" onkeyup="check()" required>
+                <span id="confirm-message"></span>
+                <input type="submit" name="submit" value="Sign Up" id="submit">
+            </form>
+        </div>
+    </div>
+    <div class="log-in-modal">
+        <div>
+            <button id="close-log-in">X</button>
+            <form action="results.html" id="form2" method="get" enctype="multipart/form-data">
+                <label for="email" class="email-1-label">Email</label>
+                <input type="email" name="email" id="email1" placeholder="example@email.com">
+                <label for="password" class="password-1-label">Password</label>
+                <input type="password" name="password" id="password1">
+                <label for="checkbox" class="checkbox-label">Remember me</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <p class="forgot">Forgot Password?</p>
+                <input type="submit" name="submit" value="Log In" id="submit1">
+            </form>
+        </div>    
+    </div>
+    <div id="shop-window" style="margin-top: -65px; position: absolute;"></div> <!--dummy div-->
+    <section class="shopping"><!--section-9-->
+        <div>
+            Shopping Tools
+        </div>
+        <div class="shop-wrapper">
+            <div class="shop-options">
+                <img src="" alt="">
+                <p>Build and Price</p>
+                <button><a href="">Go</a></button>
+            </div>
+            <div class="shop-options">
+                <img src="" alt="">
+                <p>See Offers</p>
+                <button><a href="">Go</a></button>
+            </div>
+            <div class="shop-options">
+                <img src="" alt="">
+                <p>Search Inventory</p>
+                <button><a href="">Go</a></button>
+            </div>
+            <div class="shop-options">
+                <img src="" alt="">
+                <p>Estimate Payments</p>
+                <button><a href="">Go</a></button>
+            </div>
+        </div>
+    </section>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="/scripts/scripts.js"></script>
 </body>
