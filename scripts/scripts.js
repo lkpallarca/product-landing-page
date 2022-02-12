@@ -35,15 +35,6 @@ document.getElementById("sign-up").addEventListener('click', function(e){
     document.querySelector(".sign-up-modal").classList.add("show");
 });
 
-document.getElementById("log-in").addEventListener('click', function(e){
-    e.preventDefault();
-    document.querySelector(".log-in-modal").classList.add("show");
-});
-
 document.getElementById("close-sign-up").addEventListener('click', function(){
     document.querySelector(".sign-up-modal").classList.remove("show");
-});
-
-document.getElementById("close-log-in").addEventListener('click', function(){
-    document.querySelector(".log-in-modal").classList.remove("show");
 });
