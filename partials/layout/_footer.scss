@@ -1,0 +1,173 @@
+#footer {
+    @include gen-flex(center);
+    flex-direction: column;
+    height: 90vh;
+    background-color: #f5f5f5;
+    position: relative;
+    padding-top: 80px;
+
+    .bhl {
+        height: 100px;
+        width: 170px;
+        margin-bottom: 80px;
+        position: relative;
+    }
+
+    .footer-1 {
+        @include gen-flex(space-evenly);
+        width: 100vw;
+
+        .footer-1-a {
+            @include gen-flex(center);
+            flex-direction: column;
+            position: relative;
+
+            div {
+                margin: -10px 0 20px 0;
+                color: $head-color;
+                font-size: 25px;
+                font-weight: 700;
+
+                .socmedia {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+
+        .footer-1-b {
+            @include gen-flex(center);
+            flex-direction: column;
+            margin-top: -35px;
+
+            div {
+                margin: 0 0 30px 0;
+                color: $head-color;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            button {
+                cursor: pointer;
+                border-radius: 20px;
+                border: transparent;
+                height: 40px;
+                width: 170px;
+                background-color: $head-color;
+                margin-top: -10px;
+    
+                &:hover{
+                    background-color: $text-color;
+    
+                    a {
+                        color: $head-color;
+                        font-weight: 700;
+                        z-index: 1;
+                    }
+                }
+    
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    .footer-2 {
+        position: relative;
+        margin-top: 20px;
+        height: 100%;
+        width: 100vw;
+        background-color: #007bc1;
+        @include gen-flex(center);
+        flex-direction: column;
+
+        .foot-text-1 {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            color: white;
+            font-size: 12px;
+            margin: 20px 0 0 0;
+            width: 500px;
+        }
+
+        .foot-text-2 {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            color: white;
+            font-size: 12px;
+            margin: 20px 0 0 0;
+            width: 500px;
+        }
+
+        .foot-img {
+            @include gen-flex(center);
+            position: absolute;
+
+            img {
+                &#fi-1 {
+                    height: 70px;
+                    width: 90px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-2 {
+                    height: 100px;
+                    width: 130px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-3 {
+                    height: 70px;
+                    width: 70px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-4 {
+                    height: 90px;
+                    width: 140px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-5 {
+                    height: 100px;
+                    width: 130px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-6 {
+                    height: 160px;
+                    width: 180px;
+                    margin: 0 20px 0 20px;
+                }
+
+                &#fi-7 {
+                    height: 70px;
+                    width: 160px;
+                    margin: 0 20px 0 20px;
+                }
+            }
+        }
+
+    }
+}
+
+#footer::before {
+    content: "";
+    display: block;
+    border-top: 7px solid #007bc1;
+    width: 90vw;
+    margin-bottom: 20px;
+}
+
+#footer::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid rgba($color: #202124, $alpha: 0.2);
+    width: 90vw;
+    top: 37.5%;
+}

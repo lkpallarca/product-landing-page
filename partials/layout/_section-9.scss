@@ -1,0 +1,92 @@
+.shopping {
+    @include gen-flex(center);
+    flex-direction: column;
+    background: linear-gradient(
+            $bg-color,
+            #f5f5f5
+    );
+
+    .shop-title {
+        color: $spot-color;
+        font-size: 40px;
+    }
+
+
+    .shop-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100vw;
+
+        .shop-options {
+            @include gen-flex(center);
+            flex-direction: column;
+            border: 2px solid transparent;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: white;
+            margin: 50px 40px 50px 40px;
+            padding: 40px 0 30px 0;
+            color: $head-color;
+            font-size: 20px;
+            font-weight: 700;
+
+            &:hover {
+                box-shadow: 0 8px 16px black;
+            }
+
+            img, p {
+                padding: 15px 0 20px 0;
+            }
+
+            .little {
+                margin-top: -12.5px;
+            }
+
+            #shop-img-1 {
+                width: 75px;
+                height: 75px;
+            }
+
+            #shop-img-2 {
+                width: 160px;
+                height: 90px;
+            }
+
+            #shop-img-3 {
+                width: 150px;
+                height: 90px;
+            }
+
+            #shop-img-4 {
+                width: 90px;
+                height: 80px;
+            }
+
+            button {
+                cursor: pointer;
+                margin-top: 15px;
+                border-radius: 20px;
+                border: transparent;
+                height: 30px;
+                width: 80px;
+                background-color: $head-color;
+    
+                &:hover{
+                    background-color: $text-color;
+    
+                    a {
+                        color: $head-color;
+                        font-weight: 700;
+                        z-index: 1;
+                    }
+                }
+    
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+}
