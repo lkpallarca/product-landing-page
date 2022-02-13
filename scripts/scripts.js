@@ -38,3 +38,16 @@ document.getElementById("sign-up").addEventListener('click', function(e){
 document.getElementById("close-sign-up").addEventListener('click', function(){
     document.querySelector(".sign-up-modal").classList.remove("show");
 });
+
+document.getElementById("form1").addEventListener("submit", function(){
+    localStorage.setItem("fullname", document.getElementById("name").value);
+    localStorage.setItem("email", document.getElementById("email").value);
+});
+
+setTimeout(function(){
+    if (!localStorage.noFirstVisit) {
+        document.querySelector(".sign-up-modal").classList.add("show");
+    
+        localStorage.noFirstVisit = "true";
+    }
+}, 5000);
