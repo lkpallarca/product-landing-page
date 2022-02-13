@@ -1,5 +1,5 @@
 .banner {
-    background-image: url("/assets/civic-03.png");
+    background-image: url("../assets/civic-03.png");
     @include background(center);
     height: calc(100vh - 110px);
     background-attachment: fixed;
@@ -7,7 +7,7 @@
     flex-direction: column;   
 
     .sedan-logo {
-        background-image: url("/assets/sedan-logo-removebg.png");
+        background-image: url("../assets/sedan-logo-removebg.png");
         @include background(center);
         height: 100px;
         width: 300px;

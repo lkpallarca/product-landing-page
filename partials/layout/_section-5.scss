@@ -7,7 +7,7 @@
     font-weight: 700;
 
     .exhibit-1 {
-        background-image: url("/assets/civic-exterior.png");
+        background-image: url("../assets/civic-exterior.png");
         @include background(center);
         @include gen-flex(flex-end);
         flex-direction: column;
@@ -48,7 +48,7 @@
     }
 
     .exhibit-2 {
-        background-image: url("/assets/civic-interior.png");
+        background-image: url("../assets/civic-interior.png");
         @include background(center);
         @include gen-flex(flex-end);
         flex-direction: column;
@@ -89,7 +89,7 @@
     }
 
     .exhibit-3 {
-        background-image: url("/assets/civic-e-3.png");
+        background-image: url("../assets/civic-e-3.png");
         @include background(center);
         @include gen-flex(flex-end);
         flex-direction: column;

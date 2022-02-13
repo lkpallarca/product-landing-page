@@ -5,7 +5,7 @@
     @include gen-flex(center);
 
     .banner-wrapper {
-        background-image: url("/assets/civic-banner.png");
+        background-image: url("../assets/civic-banner.png");
         @include background(center);
         min-height: 50vh;
         width: 95vw;
