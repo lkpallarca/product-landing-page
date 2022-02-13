@@ -4,19 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Honda Newsletter Successful Sign Up</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-image: url("assets/civic-screen.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .body-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            position: relative;
+            height: 70vh;
+        }
+
+        .body-wrapper > button {
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            width: 165px;
+            padding: 0;
+        }
+
+        .body-wrapper > button > a {
+            color: #f28100;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .successful-message-1 {
+            color: white;
+            font-size: 40px;
+            position: absolute;
+            bottom: 60px;
+        }
+
+        #fullname, #email {
+            color: #00a3cc;
+            font-weight: 700;
+        }
+
+
+        .successful-message-2 {
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            bottom: 15px;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: -10px;
+        }
+
+        button {
+            background-color: rgb(0,68,107);
+            border: none;
+            border-radius: 40px;
+            height: 45px;
+            width: 280px;
+            cursor: pointer;
+            transition: 0.7s all;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+        }
+
+        footer > button > a {
+            color: #EEE8A9;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div id="results"></div>
-
+    <header id="header">
+        <div class="heading">
+            <a href="https://automobiles.honda.com/civic-sedan" target="blank"><img src="assets/honda-logo.png" alt="Honda logo" id="header-img"></a>
+            <div>
+                <a href="https://automobiles.honda.com/news-and-events" target="blank">Explore</a>
+                <a href="https://automobiles.honda.com/tools/model-compare" target="blank">Vehicles</a>
+                <a href="https://owners.honda.com/" target="blank">Owners</a>
+                <a href="https://automobiles.honda.com/tools/dealership-locator" target="blank">Find a Dealer</a>
+            </div>
+        </div>
+    </header>
+    <section class="body-wrapper">
+        <button><a href="index.html">Return Home</a></button>
+        <div class="successful-message-1">
+            Thank you
+            <span id="fullname"></span>
+            for subscribing to our newsletter.
+        </div>
+        <div class="successful-message-2">
+            You will now be able to receive the latest news and information on your email
+            <span id="email"></span>.
+        </div>
+    </section>
+    <footer>
+        <button><a target="blank" href="https://automobiles.honda.com/-/media/Honda-Automobiles/Non-VLP/Email-Signup/HondaNewsletter.jpg">View Sample Newsletter</a></button>
+    </footer>
     <script>
-        const resultsList = document.getElementById("results");
-        new URLSearchParams(window.location.search).forEach((value, name) => {
-            if(name !== "password" && name !== "conpass" && name !== "submit"){
-                resultsList.append(`${name} = ${value}`);
-                resultsList.append(document.createElement("br"));
-            }
-        })
+        document.getElementById("fullname").append(localStorage.getItem("fullname"));
+        document.getElementById("email").append(localStorage.getItem("email"));
+
+        console.log(window.location.href);
+        console.log(window.location);
     </script>
 </body>
 </html>
