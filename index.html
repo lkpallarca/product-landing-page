@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="/my-logo/favicon.ico">
-    <link rel="icon" type="image/gif" href="/my-logo/animated_favicon1.gif">
+    <link rel="shortcut icon" href="my-logo/favicon.ico">
+    <link rel="icon" type="image/gif" href="my-logo/animated_favicon1.gif">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>2022 Civic Sedan: Driving Fun</title>
 </head>
 <body>
     <header id="header">
         <div class="heading">
-            <a href="https://automobiles.honda.com/civic-sedan" target="blank"><img src="/assets/honda-logo.png" alt="Honda logo" id="header-img"></a>
+            <a href="https://automobiles.honda.com/civic-sedan" target="blank"><img src="assets/honda-logo.png" alt="Honda logo" id="header-img"></a>
             <div>
                 <a href="https://automobiles.honda.com/news-and-events" target="blank">Explore</a>
                 <a href="https://automobiles.honda.com/tools/model-compare" target="blank">Vehicles</a>
@@ -106,12 +106,12 @@
             <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
             <button class="carousel-button next" data-carousel-button="next">&#187;</button>
             <ul data-slides>
-                <li class="slide exin-1" data-active><img src="/assets/civic-e&i-1.png" alt="blue civic sedan"></li>
-                <li class="slide exin-2"><img src="/assets/civic-e&i-4.png" alt="blue civic sedan front view"></li>
-                <li class="slide exin-3"><img src="/assets/civic-e&i-5.png" alt="civic sedan dashboard"></li>
-                <li class="slide exin-4"><img src="/assets/civic-e&i-6.png" alt="civic sedan interior seats"></li>
-                <li class="slide exin-5"><img src="/assets/civic-e&i-3.png" alt="red civic sedan rear view"></li>
-                <li class="slide exin-6"><img src="/assets/civic-e&i-2.png" alt="civic sedan interior floor"></li>
+                <li class="slide exin-1" data-active><img src="assets/civic-e&i-1.png" alt="blue civic sedan"></li>
+                <li class="slide exin-2"><img src="assets/civic-e&i-4.png" alt="blue civic sedan front view"></li>
+                <li class="slide exin-3"><img src="assets/civic-e&i-5.png" alt="civic sedan dashboard"></li>
+                <li class="slide exin-4"><img src="assets/civic-e&i-6.png" alt="civic sedan interior seats"></li>
+                <li class="slide exin-5"><img src="assets/civic-e&i-3.png" alt="red civic sedan rear view"></li>
+                <li class="slide exin-6"><img src="assets/civic-e&i-2.png" alt="civic sedan interior floor"></li>
             </ul>
         </div>
     </section>
@@ -126,13 +126,13 @@
             <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
             <button class="carousel-button next" data-carousel-button="next">&#187;</button>
             <ul data-slides>
-                <li class="slide pete-1" data-active><img src="/assets/civic-pe&te-2.png" alt="silver civic rear view"></li>
-                <li class="slide pete-2"><img src="/assets/civic-pe&te-3.png" alt="engine picture"></li>
-                <li class="slide pete-3"><img src="/assets/civic-pe&te-4.png" alt="civic sedan driving controls"></li>
-                <li class="slide pete-4"><img src="/assets/civic-pe&te-5.png" alt="dashboard picture of civic sedan with gadgets"></li>
-                <li class="slide pete-5"><img src="/assets/civic-pe&te-6.png" alt="picture of a tablet device"></li>
-                <li class="slide pete-6"><img src="/assets/civic-pe&te-7.png" alt="overhead picture of surround sound system"></li>
-                <li class="slide pete-7"><img src="/assets/civic-pe&te-1.png" alt="civic sedan side mirror"></li>
+                <li class="slide pete-1" data-active><img src="assets/civic-pe&te-2.png" alt="silver civic rear view"></li>
+                <li class="slide pete-2"><img src="assets/civic-pe&te-3.png" alt="engine picture"></li>
+                <li class="slide pete-3"><img src="assets/civic-pe&te-4.png" alt="civic sedan driving controls"></li>
+                <li class="slide pete-4"><img src="assets/civic-pe&te-5.png" alt="dashboard picture of civic sedan with gadgets"></li>
+                <li class="slide pete-5"><img src="assets/civic-pe&te-6.png" alt="picture of a tablet device"></li>
+                <li class="slide pete-6"><img src="assets/civic-pe&te-7.png" alt="overhead picture of surround sound system"></li>
+                <li class="slide pete-7"><img src="assets/civic-pe&te-1.png" alt="civic sedan side mirror"></li>
             </ul>
         </div>
     </section>
@@ -153,17 +153,12 @@
     <div class="sign-up-modal">
         <div>
             <button id="close-sign-up">X</button>
-            <form action="results.html" id="form1" method="get" enctype="multipart/form-data">
+            <form action="results.html" id="form1" method="get">
                 <label for="name" class="name-label">Full Name</label>
-                <input type="name" name="name" id="name" placeholder="Ex. Lance Kennard M. Pallarca">
+                <input value="haha" type="name" id="name" placeholder="Ex. Lance Kennard M. Pallarca">
                 <label for="email" class="email-label">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                <label for="password" class="password-label">Password</label>
-                <input type="password" name="password" id="password" onkeyup="check()" required minlength="6">
-                <label for="conpass" class="conpass-label">Confirm Password</label>
-                <input type="password" name="conpass" id="conpass" onkeyup="check()" required>
-                <span id="confirm-message"></span>
-                <input type="submit" name="submit" value="Sign Up" id="submit">
+                <input value="haha@haha.com" type="email" id="email" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="submit" value="Sign Up" id="submit">
             </form>
         </div>
     </div>
@@ -174,41 +169,41 @@
         </div>
         <div class="shop-wrapper">
             <div class="shop-options">
-                <img id="shop-img-1" src="/assets/screw-wrench.png" alt="screw and wrench">
+                <img id="shop-img-1" src="assets/screw-wrench.png" alt="screw and wrench">
                 <p>Build and Price</p>
                 <button><a href="https://automobiles.honda.com/tools/build-and-price-trimwalk?fromvlp=1&modelseries=civic-sedan&modelyear=2022" target="blank">GO</a></button>
             </div>
             <div class="shop-options">
-                <img id="shop-img-2" src="/assets/price-tag.png" alt="price tag">
+                <img id="shop-img-2" src="assets/price-tag.png" alt="price tag">
                 <p class="little">See Offers</p>
                 <button><a href="https://automobiles.honda.com/tools/current-offers?vehiclemodelseries=civic-sedan" target="blank">GO</a></button>
             </div>
             <div class="shop-options">
-                <img id="shop-img-3" src="/assets/magnifying-glass.png" alt="magnifying glass>
+                <img id="shop-img-3" src="assets/magnifying-glass.png" alt="magnifying glass>
                 <p class="little">Search Inventory</p>
                 <button><a href="https://automobiles.honda.com/tools/search-inventory?modelseries=civic-sedan&modelyear=2022" target="blank">GO</a></button>
             </div>
             <div class="shop-options">
-                <img id="shop-img-4" src="/assets/calculator.png" alt="calculator">
+                <img id="shop-img-4" src="assets/calculator.png" alt="calculator">
                 <p>Estimate Payments</p>
                 <button><a href="https://automobiles.honda.com/tools/payment-estimator-trimwalk-select?modelseries=civic-sedan&modelYear=2022" target="blank">GO</a></button>
             </div>
         </div>
     </section>
     <footer id="footer">
-        <img class="bhl" src="/assets/blue-honda-logo.png" alt="blue honda logo">
+        <img class="bhl" src="assets/blue-honda-logo.png" alt="blue honda logo">
         <div class="footer-1">
             <div class="footer-1-a">
                 <div>
                     Stay in Touch
                 </div>
                 <div>
-                    <a href="https://www.facebook.com/Honda" target="blank"><img class="socmedia" src="/assets/fb-black.png" alt="facebook logo"></img></a>
-                    <a href="https://twitter.com/Honda" target="blank"><img class="socmedia" src="/assets/twitter-black.png" alt="twitter logo"></img></a>
-                    <a href="https://www.youtube.com/user/Honda" target="blank"><img class="socmedia" src="/assets/yt-black.png" alt="youtube logo"></img></a>
-                    <a href="https://www.linkedin.com/company/american-honda-motor-company-inc-" target="blank"><img class="socmedia" src="/assets/in-black.png" alt="linked in logo"></img></a>
-                    <a href="https://www.pinterest.com/honda/" target="blank"></img><img class="socmedia" src="/assets/pin-black.png" alt="pinterest logo"></a>
-                    <a href="https://www.snapchat.com/add/officialhonda" target="blank"></img><img class="socmedia" src="/assets/snap-black.png" alt="snapchat logo"></a>
+                    <a href="https://www.facebook.com/Honda" target="blank"><img class="socmedia" src="assets/fb-black.png" alt="facebook logo"></img></a>
+                    <a href="https://twitter.com/Honda" target="blank"><img class="socmedia" src="assets/twitter-black.png" alt="twitter logo"></img></a>
+                    <a href="https://www.youtube.com/user/Honda" target="blank"><img class="socmedia" src="assets/yt-black.png" alt="youtube logo"></img></a>
+                    <a href="https://www.linkedin.com/company/american-honda-motor-company-inc-" target="blank"><img class="socmedia" src="assets/in-black.png" alt="linked in logo"></img></a>
+                    <a href="https://www.pinterest.com/honda/" target="blank"></img><img class="socmedia" src="assets/pin-black.png" alt="pinterest logo"></a>
+                    <a href="https://www.snapchat.com/add/officialhonda" target="blank"></img><img class="socmedia" src="assets/snap-black.png" alt="snapchat logo"></a>
                 </div>
             </div>
             <div class="footer-1-b">
@@ -225,13 +220,13 @@
                 ©2022 American Honda Motor Co., Inc. All information contained herein applies to U.S. vehicles only. For non-U.S.-distributor information go to world.honda.com.
             </div>
             <div class="foot-img">
-                <a href="http://automobiles.honda.com/" target="blank"><img id="fi-1" src="/assets/honda-logo.png" alt="honda logo"></a>
-                <a href="http://www.acura.com/" target="blank"><img id="fi-2" src="/assets/acura-logo.png" alt="acura logo"></a>
-                <a href="http://powersports.honda.com/" target="blank"><img id="fi-3" src="/assets/honda-wings.png" alt="honda wings logo"></a>
-                <a href="http://powerequipment.honda.com/" target="blank"><img id="fi-4" src="/assets/honda-equipment.png" alt="honda equipment"></a>
-                <a href="http://www.hondajet.com/" target="blank"><img id="fi-5" src="/assets/honda-jet.png" alt="honda jet logo"></a>
-                <a href="http://marine.honda.com/" target="blank"><img id="fi-6" src="/assets/honda-marine.png" alt="honda marine logo"></a>
-                <a href="http://hpd.honda.com/" target="blank"><img id="fi-7" src="/assets/honda-racing.png" alt="honda racing logo"></a>
+                <a href="http://automobiles.honda.com/" target="blank"><img id="fi-1" src="assets/honda-logo.png" alt="honda logo"></a>
+                <a href="http://www.acura.com/" target="blank"><img id="fi-2" src="assets/acura-logo.png" alt="acura logo"></a>
+                <a href="http://powersports.honda.com/" target="blank"><img id="fi-3" src="assets/honda-wings.png" alt="honda wings logo"></a>
+                <a href="http://powerequipment.honda.com/" target="blank"><img id="fi-4" src="assets/honda-equipment.png" alt="honda equipment"></a>
+                <a href="http://www.hondajet.com/" target="blank"><img id="fi-5" src="assets/honda-jet.png" alt="honda jet logo"></a>
+                <a href="http://marine.honda.com/" target="blank"><img id="fi-6" src="assets/honda-marine.png" alt="honda marine logo"></a>
+                <a href="http://hpd.honda.com/" target="blank"><img id="fi-7" src="assets/honda-racing.png" alt="honda racing logo"></a>
             </div>
             <div class="foot-text-2">
                 We use cookies to improve your experience on this site and show you personalized advertising. To find out more, read our Cookie Policy.
@@ -239,6 +234,6 @@
         </div>
     </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/scripts/scripts.js"></script>
+<script src="scripts/scripts.js"></script>
 </body>
 </html>
