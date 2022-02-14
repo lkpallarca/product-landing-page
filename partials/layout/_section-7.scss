@@ -152,3 +152,136 @@
         }
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .pandt {
+        .slideshow {
+            font-size: 20px;
+            padding: 10px 0 10px 0;
+        }
+        
+        .slideshow::after {
+            left: 5%;
+            top: 75px;
+            height: 180px;
+            width: 170px;
+        }
+            
+        .carousel {
+            height: 50vh;
+    
+            .pete-1::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-1::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-2::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-2::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-3::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-3::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-4::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-4::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-5::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-5::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-6::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-6::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .pete-7::before {
+                top: 85px;
+                left: 7%;
+                font-size: 12px;
+                width: 150px;
+            }
+        
+            .pete-7::after {
+                top: 125px;
+                left: 6%;
+                font-size: 8px;
+                width: 140px;
+                line-height: 10px;
+            }
+        
+            .slide[data-active] {
+                opacity: 1;
+            }
+        
+            .carousel-button {
+                top: 75%;
+            }
+        }
+    }
+}

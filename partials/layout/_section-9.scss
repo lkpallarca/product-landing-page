@@ -88,5 +88,79 @@
             }
         }
     }
+}
 
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .shopping {
+        padding-top: 25px;
+        .shop-title {
+            font-size: 20px;
+        }
+    
+        .shop-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
+            .shop-options {
+                @include gen-flex(center);
+                flex-direction: column;
+                margin: 20px 10px 20px 10px;
+                padding: 20px 0 10px 0;
+                font-size: 18px;
+    
+                img, p {
+                    padding: 5px 0 10px 0;
+                }
+    
+                .little {
+                    margin-top: -5px;
+                }
+    
+                #shop-img-1 {
+                    width: 50px;
+                    height: 50px;
+                }
+    
+                #shop-img-2 {
+                    width: 110px;
+                    height: 65px;
+                }
+    
+                #shop-img-3 {
+                    width: 110px;
+                    height: 70px;
+                }
+    
+                #shop-img-4 {
+                    width: 80px;
+                    height: 70px;
+                }
+    
+                button {
+                    cursor: pointer;
+                    margin-top: 15px;
+                    border-radius: 20px;
+                    border: transparent;
+                    height: 30px;
+                    width: 80px;
+                    background-color: $head-color;
+        
+                    &:hover{
+                        background-color: $text-color;
+        
+                        a {
+                            color: $head-color;
+                            font-weight: 700;
+                            z-index: 1;
+                        }
+                    }
+        
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
 }

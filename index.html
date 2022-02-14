@@ -21,8 +21,9 @@
                 <a href="https://automobiles.honda.com/tools/dealership-locator" target="blank">Find a Dealer</a>
             </div>
         </div>
+        <div id="hidden">Menu</div>
         <nav id="nav-bar">
-            <ul>
+            <ul id="hidden-dropdown">
                 <li class="nav-link"><a href="#header">Home</a></li>
                 <li class="nav-link"><a href="#video-window">Video</a></li>
                 <li class="nav-link"><a href="#gallery-window">Gallery</a></li>
@@ -151,15 +152,19 @@
         </div>
     </section>
     <div class="sign-up-modal">
-        <div>
+        <div class="form-wrapper">
             <button id="close-sign-up">X</button>
+            <div class="newsletter">Newsletter</div>
+            <div class="newsletter-info">Get Honda news delivered</div>
+            <div class="newsletter-info-2">straight to your inbox</div>
             <form action="results.html" id="form1" method="get">
                 <label for="name" class="name-label">Full Name</label>
-                <input value="haha" type="name" id="name" placeholder="Ex. Lance Kennard M. Pallarca">
+                <input type="name" id="name" placeholder="Ex. Lance Kennard Pallarca" required>
                 <label for="email" class="email-label">Email</label>
-                <input value="haha@haha.com" type="email" id="email" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="email" id="email" placeholder="sy.feydaniel@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 <input type="submit" value="Sign Up" id="submit">
             </form>
+            <div class="disclaimer">By submitting this form, you agree to the Terms of Use and Privacy of this website.</div>
         </div>
     </div>
     <div id="shop-window" style="margin-top: -105px; position: absolute;"></div> <!--dummy div-->

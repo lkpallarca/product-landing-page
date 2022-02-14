@@ -14,3 +14,19 @@
         font-size: 20px;
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .gallery-info {
+        padding: 15px;
+    
+        strong {
+            color: $spot-color;
+            font-size: 20px;
+        }
+    
+        div {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+    }
+}

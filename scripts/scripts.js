@@ -1,6 +1,7 @@
 AOS.init();
 
-window.onscroll = function() {scrollStick()};
+window.addEventListener("scroll", scrollStick);
+window.addEventListener("scroll", scrollStickSmall);
 
 var navbar = document.getElementById("nav-bar");
 var sticky = navbar.offsetTop;
@@ -10,6 +11,17 @@ function scrollStick() {
         navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
+    }
+}
+
+var navbarSmall = document.getElementById("hidden");
+var stickySmall = navbarSmall.offsetTop;
+
+function scrollStickSmall() {
+    if (window.scrollY >= stickySmall) {
+        navbarSmall.classList.add("show-hidden");
+    } else {
+        navbarSmall.classList.remove("show-hidden");
     }
 }
 
@@ -28,6 +40,10 @@ buttons.forEach(button => {
         slides.children[newIndex].dataset.active = true;
         delete activeSlide.dataset.active;
     });
+});
+
+document.getElementById("hidden").addEventListener('click', function(){
+    document.getElementById("nav-bar").classList.toggle("menu-show");
 });
 
 document.getElementById("sign-up").addEventListener('click', function(e){

@@ -50,6 +50,10 @@
             }
         }
     }
+}
 
-    
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .bottom-banner {
+        display: none;
+    }
 }

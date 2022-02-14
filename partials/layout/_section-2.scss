@@ -53,3 +53,47 @@
 
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .information {
+        padding: 10px;
+    
+        .info-title {
+            strong {
+                color: $spot-color;
+                font-size: 20px;
+            }
+        
+            span {
+                color: $text-color;
+                font-size: 20px;
+            }
+        }
+    
+        .info-text {
+            margin: 15px 0 15px 0;
+            font-size: 12px;
+        }
+    
+        .info-features {
+            @include gen-flex(center);
+            flex-direction: column;
+            font-size: 8px;
+    
+            .engine::after {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+    
+            .sensor::after { 
+                margin-bottom: 10px;
+                margin-top: 5px;
+            }
+    
+            .tech::after {
+                margin-top: 5px;
+            }
+    
+        }
+    }
+}

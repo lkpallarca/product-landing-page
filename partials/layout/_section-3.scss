@@ -8,3 +8,14 @@
         @include gen-pos(relative, 50%, 50%);
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .video-banner {
+        height: 70vh;
+    
+        #video {
+            width: 350px;
+            height: 199px;
+        }
+    }
+}

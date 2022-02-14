@@ -46,3 +46,36 @@
         }
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .banner {
+        .sedan-logo {
+            @include gen-pos(absolute, 32%, 50%);
+            height: 83px;
+            width: 260px;
+        }
+    
+        .sedan-intro-1 {
+            @include gen-pos(absolute, 45.5%, 52%);
+            height: auto;
+            width: 180px;
+            font-size: 20px;
+        }
+    
+        .sedan-intro-2 {
+            @include gen-pos(absolute, 51.5%, 52%);
+            height: auto;
+            width: 220px;
+            font-size: 20px;
+        }
+    
+        .to-video {
+            a {
+                @include gen-pos(absolute, 64%, 52%);
+                height: 50px;
+                width: 150px;
+                font-size: 20px;
+            }
+        }
+    }
+}

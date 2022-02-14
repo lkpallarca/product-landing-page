@@ -132,3 +132,116 @@
         right: 10px;
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .slideshow {
+        font-size: 20px;
+        padding: 10px 0 10px 0;
+    }
+    
+    .slideshow::after {
+        height: 180px;
+        width: 160px;
+        right: 5%;
+        top: 75px;
+    }
+        
+    .carousel {
+        height: 50vh;
+    
+        .exin-1::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-1::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .exin-2::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-2::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .exin-3::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-3::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .exin-4::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-4::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .exin-5::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-5::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .exin-6::before {
+            top: 85px;
+            left: 77%;
+            font-size: 12px;
+            width: 150px;
+        }
+    
+        .exin-6::after {
+            top: 125px;
+            left: 76%;
+            font-size: 8px;
+            width: 140px;
+            line-height: 10px;
+        }
+    
+        .carousel-button {
+            z-index: 2;
+            top: 75%;
+        }
+    }
+}

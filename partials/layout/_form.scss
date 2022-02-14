@@ -9,98 +9,282 @@
     visibility: hidden;
     opacity: 0;
     transition: 0.7s;
-
+    
     &.show {
         visibility: visible;
         opacity: 1;
     }
 
-    #close-sign-up {
-        position: absolute;
-        top: 5%;
-        right: 30%;
-        cursor: pointer;
-    }
-
-    #confirm-message {
-        position: relative;
-        left: 8%;
-    }
-
-    #form1 {
-        position: relative;
-        display: flex;
+    .form-wrapper {
+        height: 450px;
+        width: 550px;
+        border: 5px solid $nav-color;
+        border-radius: 10px;
+        background-color: rgb(226,217,194);
+        margin: 0;
+        @include gen-flex(center);
         flex-direction: column;
-        justify-content: center;
-        height: 400px;
-        width: 350px;
+        position: relative;
 
-        .name-label, .email-label, .password-label, .conpass-label {
-            position: relative;
-            top: 0%;
-            left: 5%;
-            color: $text-color;
+        .disclaimer {
+            position: absolute;
+            bottom: 3%;
+            left: 3%;
+            font-size: 10px;
         }
 
-        #name {
-            padding: 0 5px 0 5px;
-            height: 30px;
-            width: 300px;
-            margin: 10px 0 10px 0;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    
-        #email {
-            padding: 0 5px 0 5px;
-            height: 30px;
-            width: 300px;
-            margin: 10px 0 10px 0;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    
-        #password {
-            padding: 0 5px 0 5px;
-            height: 30px;
-            width: 300px;
-            margin: 10px 0 10px 0;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    
-        #conpass {
-            padding: 0 5px 0 5px;
-            height: 30px;
-            width: 300px;
-            margin: 10px 0 10px 0;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
+        .newsletter {
+            position: absolute;
+            color: $nav-color;
+            font-weight: 700;
+            top: 10%;
         }
 
-        #submit {
+        .newsletter-info {
+            position: absolute;
+            color: $nav-color;
+            font-size: 35px;
+            top: 20%;
+        }
+
+        .newsletter-info-2 {
+            position: absolute;
+            color: $nav-color;
+            font-size: 35px;
+            top: 30%;
+        }
+
+        #close-sign-up {
+            position: absolute;
+            top: 3%;
+            right: 3%;
             cursor: pointer;
-            background-color: $head-color;
-            color: $text-color;
-            margin-top: 10px;
-            padding: 0 5px 0 5px;
-            height: 30px;
-            width: 80px;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            border: none;
-            border-radius: 20px;
-            transition: 0.4s all;
+        }
+    
+        #form1 {
+            position: absolute;
+            top: 22%;
+            left: 17.5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 400px;
+            width: 350px;
+            
 
-            &:hover {
-                color: $head-color;
-                background-color: $text-color;
+            .name-label, .email-label {
+                position: relative;
+                top: 0%;
+                left: 5%;
+                color: $nav-color;
                 font-weight: 700;
+            }
+    
+            #name {
+                padding: 0 5px 0 5px;
+                height: 30px;
+                width: 300px;
+                margin: 10px 0 10px 0;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background: transparent;
+            }
+        
+            #email {
+                padding: 0 5px 0 5px;
+                height: 30px;
+                width: 300px;
+                margin: 10px 0 10px 0;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background: transparent;
+            }
+        
+            #password {
+                padding: 0 5px 0 5px;
+                height: 30px;
+                width: 300px;
+                margin: 10px 0 10px 0;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        
+            #conpass {
+                padding: 0 5px 0 5px;
+                height: 30px;
+                width: 300px;
+                margin: 10px 0 10px 0;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            #submit {
+                cursor: pointer;
+                background-color: $head-color;
+                color: $text-color;
+                margin-top: 10px;
+                padding: 0 5px 0 5px;
+                height: 30px;
+                width: 80px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                border: none;
+                border-radius: 20px;
+                transition: 0.4s all;
+    
+                &:hover {
+                    color: $head-color;
+                    background-color: $text-color;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 720px) {
+    .sign-up-modal {
+        background-color: rgba(0, 0, 0, 0.59);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        @include gen-flex(center);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.7s;
+        
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .form-wrapper {
+            height: 350px;
+            width: 350px;
+            border: 5px solid $nav-color;
+            border-radius: 10px;
+            background-color: rgb(226,217,194);
+            margin: 0;
+            @include gen-flex(center);
+            flex-direction: column;
+            position: relative;
+    
+            .disclaimer {
+                position: absolute;
+                bottom: 3%;
+                left: 3%;
+                font-size: 6px;
+            }
+    
+            .newsletter {
+                position: absolute;
+                color: $nav-color;
+                font-weight: 700;
+                top: 10%;
+            }
+    
+            .newsletter-info {
+                position: absolute;
+                color: $nav-color;
+                font-size: 20px;
+                top: 20%;
+            }
+    
+            .newsletter-info-2 {
+                position: absolute;
+                color: $nav-color;
+                font-size: 20px;
+                top: 30%;
+            }
+    
+            #close-sign-up {
+                position: absolute;
+                top: 3%;
+                right: 3%;
+                cursor: pointer;
+            }
+        
+            #form1 {
+                position: absolute;
+                top: 9%;
+                left: 1%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 400px;
+                width: 350px;
+                
+    
+                .name-label, .email-label {
+                    position: relative;
+                    top: 0%;
+                    left: 5%;
+                    color: $nav-color;
+                    font-weight: 700;
+                }
+        
+                #name {
+                    padding: 0 5px 0 5px;
+                    height: 30px;
+                    width: 300px;
+                    margin: 10px 0 10px 0;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    background: transparent;
+                }
+            
+                #email {
+                    padding: 0 5px 0 5px;
+                    height: 30px;
+                    width: 300px;
+                    margin: 10px 0 10px 0;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    background: transparent;
+                }
+        
+                #submit {
+                    cursor: pointer;
+                    background-color: $head-color;
+                    color: $text-color;
+                    padding: 0 5px 0 5px;
+                    height: 30px;
+                    width: 80px;
+                    position: relative;
+                    top: -2.5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: none;
+                    border-radius: 20px;
+                    transition: 0.4s all;
+        
+                    &:hover {
+                        color: $head-color;
+                        background-color: $text-color;
+                        font-weight: 700;
+                    }
+                }
             }
         }
     }
